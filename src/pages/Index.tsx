@@ -225,36 +225,36 @@ const Hero = ({ theme }: { theme: string }) => {
             </div>
 
             {/* Sezione dei 3 box informativi */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="mt-16 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 {/* Box 1: Tempo */}
-                <div className={`info-box rounded-lg p-8 text-center shadow-lg border transition-all duration-300 hover:shadow-cyan-400/20 hover:-translate-y-2 ${theme === 'light' ? 'bg-white border-gray-200' : 'bg-neutral-900 border-neutral-700'}`}>
+                <div className={`info-box rounded-lg p-6 md:p-8 text-center shadow-lg border transition-all duration-300 hover:shadow-cyan-400/20 hover:-translate-y-2 ${theme === 'light' ? 'bg-white border-gray-200' : 'bg-neutral-900 border-neutral-700'}`}>
                     <div className="flex flex-col items-center">
-                        <Clock className={`w-10 h-10 mb-4 ${theme === 'light' ? 'text-cyan-600' : 'text-cyan-400'}`} />
-                        <h3 className={`text-xl font-medium ${theme === 'light' ? 'text-black' : 'text-white'}`}>Tempo</h3>
+                        <Clock className={`w-10 h-10 md:w-12 md:h-12 mb-4 ${theme === 'light' ? 'text-cyan-600' : 'text-cyan-400'}`} />
+                        <h3 className={`text-lg md:text-xl font-medium ${theme === 'light' ? 'text-black' : 'text-white'}`}>Tempo</h3>
                     </div>
-                    <p className={`mt-4 ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
+                    <p className={`mt-4 text-sm md:text-base ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
                         Il tuo team spreca ore preziose in attività ripetitive invece di concentrarsi su ciò che conta davvero.
                     </p>
                 </div>
 
                 {/* Box 2: Costi */}
-                 <div className={`info-box rounded-lg p-8 text-center shadow-lg border transition-all duration-300 hover:shadow-cyan-400/20 hover:-translate-y-2 ${theme === 'light' ? 'bg-white border-gray-200' : 'bg-neutral-900 border-neutral-700'}`}>
+                <div className={`info-box rounded-lg p-6 md:p-8 text-center shadow-lg border transition-all duration-300 hover:shadow-cyan-400/20 hover:-translate-y-2 ${theme === 'light' ? 'bg-white border-gray-200' : 'bg-neutral-900 border-neutral-700'}`}>
                     <div className="flex flex-col items-center">
-                        <DollarSign className={`w-10 h-10 mb-4 ${theme === 'light' ? 'text-cyan-600' : 'text-cyan-400'}`} />
-                        <h3 className={`text-xl font-medium ${theme === 'light' ? 'text-black' : 'text-white'}`}>Costi</h3>
+                        <DollarSign className={`w-10 h-10 md:w-12 md:h-12 mb-4 ${theme === 'light' ? 'text-cyan-600' : 'text-cyan-400'}`} />
+                        <h3 className={`text-lg md:text-xl font-medium ${theme === 'light' ? 'text-black' : 'text-white'}`}>Costi</h3>
                     </div>
-                    <p className={`mt-4 ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
+                    <p className={`mt-4 text-sm md:text-base ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
                         I costi operativi aumentano, ma i risultati non crescono allo stesso ritmo: ogni inefficienza pesa sui margini.
                     </p>
                 </div>
 
                 {/* Box 3: Scalabilità */}
-                 <div className={`info-box rounded-lg p-8 text-center shadow-lg border transition-all duration-300 hover:shadow-cyan-400/20 hover:-translate-y-2 ${theme === 'light' ? 'bg-white border-gray-200' : 'bg-neutral-900 border-neutral-700'}`}>
+                <div className={`info-box rounded-lg p-6 md:p-8 text-center shadow-lg border transition-all duration-300 hover:shadow-cyan-400/20 hover:-translate-y-2 ${theme === 'light' ? 'bg-white border-gray-200' : 'bg-neutral-900 border-neutral-700'}`}>
                     <div className="flex flex-col items-center">
-                        <TrendingUp className={`w-10 h-10 mb-4 ${theme === 'light' ? 'text-cyan-600' : 'text-cyan-400'}`} />
-                        <h3 className={`text-xl font-medium ${theme === 'light' ? 'text-black' : 'text-white'}`}>Scalabilità</h3>
+                        <TrendingUp className={`w-10 h-10 md:w-12 md:h-12 mb-4 ${theme === 'light' ? 'text-cyan-600' : 'text-cyan-400'}`} />
+                        <h3 className={`text-lg md:text-xl font-medium ${theme === 'light' ? 'text-black' : 'text-white'}`}>Scalabilità</h3>
                     </div>
-                    <p className={`mt-4 ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
+                    <p className={`mt-4 text-sm md:text-base ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
                         Quando il business cresce, i processi manuali diventano un freno: senza automazione, scalare significa solo più lavoro e più stress.
                     </p>
                 </div>
