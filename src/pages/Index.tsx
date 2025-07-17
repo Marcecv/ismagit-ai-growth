@@ -203,7 +203,7 @@ const Hero = ({ theme }: { theme: string }) => {
                         <span className="text-cyan-500 dark:text-cyan-400">Intelligente con IA<BlinkingCursor /></span>
                     </h1>
                     <p className={`text-base md:text-lg mt-8 transition-colors duration-500 ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'}`}>
-                        Trasforma il tuo marketing e i tuoi processi interni in un motore di crescita automatizzato: meno ore di lavoro, più risultati concreti, grazie alle nostre soluzioni basate sull'intelligenza artificiale.
+                        Automatizza marketing e processi aziendali con l'intelligenza artificiale: meno tempo sprecato, più risultati misurabili, grazie a soluzioni personalizzate e operative da subito.
                     </p>
                     {/* Pulsante Prenota una chiamata */}
                     <div className="mt-8">
@@ -220,7 +220,7 @@ const Hero = ({ theme }: { theme: string }) => {
                     Le sfide da superare
                 </div>
                 <h2 className={`mt-4 text-2xl md:text-3xl font-medium tracking-tight ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
-                    Perché la IA è la tua prossima mossa strategica
+                    Perché l'Intelligenza Artificiale può essere la leva strategica per la crescita del tuo business
                 </h2>
             </div>
 
@@ -425,7 +425,7 @@ export default function Index() {
             }
             return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
-        return 'light';
+        return 'dark';
     });
 
     const toggleTheme = () => {

@@ -198,6 +198,12 @@ All colors MUST be HSL.
   
   /* Scroll mask per il carosello */
   .scroll-mask {
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+  
+  @media (max-width: 768px) {
+    .scroll-mask {
+      mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+    }
   }
 }
