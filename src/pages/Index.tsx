@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef, useMemo } from 'react';
 import { Sun, Moon, Menu, X, Clock, DollarSign, TrendingUp } from 'lucide-react';
 import { useTranslations } from '@/hooks/useTranslations';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -86,7 +86,7 @@ const BlinkingCursor = () => (
 // Componente Header (Menu di navigazione)
 const Header = ({ theme, toggleTheme }: { theme: string; toggleTheme: () => void }) => {
     const { t } = useTranslations();
-    const navLinks = getNavLinks(t);
+    const navLinks = useMemo(() => getNavLinks(t), [t]);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     
     const [activeTab, setActiveTab] = useState(navLinks[0].id);
@@ -192,8 +192,8 @@ const Header = ({ theme, toggleTheme }: { theme: string; toggleTheme: () => void
 // Componente Hero (Sezione principale)
 const Hero = ({ theme }: { theme: string }) => {
     const { t } = useTranslations();
-    const featureTabsData = getFeatureTabsData(t);
-    const solutionsData = getSolutionsData(t);
+    const featureTabsData = useMemo(() => getFeatureTabsData(t), [t]);
+    const solutionsData = useMemo(() => getSolutionsData(t), [t]);
     
     const [activeFeatureTab, setActiveFeatureTab] = useState(featureTabsData[0].id);
     const activeContent = featureTabsData.find(tab => tab.id === activeFeatureTab);
@@ -384,7 +384,7 @@ const Hero = ({ theme }: { theme: string }) => {
 // Componente Footer (Piè di pagina)
 const Footer = ({ theme }: { theme: string }) => {
     const { t, language, setLanguage } = useTranslations();
-    const navLinks = getNavLinks(t);
+    const navLinks = useMemo(() => getNavLinks(t), [t]);
     const logoDark = "https://ik.imagekit.io/mcv/LOGO%20ROBOT%20MINIMALISTA%20(1).png?updatedAt=1752241858230";
     return (
         <footer id="contatti" className="relative overflow-hidden pt-16 pb-8 bg-neutral-900">
