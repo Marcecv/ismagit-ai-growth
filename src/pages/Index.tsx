@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { Sun, Moon, Menu, X, Clock, DollarSign, TrendingUp } from 'lucide-react';
+import { PrivacyPolicyModal } from '@/components/PrivacyPolicyModal';
 
 // --- Main Components ---
 
@@ -382,6 +383,13 @@ const Footer = ({ theme }: { theme: string }) => {
                         <a href="https://cal.com/marcecv/30min" target="_blank" rel="noopener noreferrer" className="animated-border-btn cta bg-cyan-500 text-white">
                            <span className="btn-text">Prenota una chiamata</span>
                         </a>
+                        <div className="mt-4">
+                            <PrivacyPolicyModal>
+                                <button className="text-gray-400 hover:text-white transition-colors text-sm underline">
+                                    Privacy Policy
+                                </button>
+                            </PrivacyPolicyModal>
+                        </div>
                     </div>
                     <div className="md:col-span-4">
                         <h4 className="font-bold text-white mb-4">Menu</h4>
