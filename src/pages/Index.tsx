@@ -308,8 +308,8 @@ const Hero = ({ theme }: { theme: string }) => {
                 </h3>
                 <div className="relative w-full max-w-5xl mx-auto overflow-hidden scroll-mask">
                     <div className="flex animate-scroll">
-                        {[...logos, ...logos].map((logo, index) => (
-                            <img key={index} src={logo} alt={`Logo ${index + 1}`} className="h-16 w-auto mx-12" />
+                        {[...logos, ...logos, ...logos].map((logo, index) => (
+                            <img key={index} src={logo} alt={`Logo ${index + 1}`} className="h-12 md:h-16 w-auto mx-6 md:mx-12 flex-shrink-0" />
                         ))}
                     </div>
                 </div>

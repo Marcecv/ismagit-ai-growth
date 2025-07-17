@@ -90,7 +90,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'blink': 'blink 1.2s step-end infinite',
-				'scroll': 'scroll 20s linear infinite',
+				'scroll': 'scroll 15s linear infinite',
 				'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
 				'fade-in': 'fadeIn 0.5s ease-in-out',
 				'rotate-border': 'rotate-border 4s linear infinite'
