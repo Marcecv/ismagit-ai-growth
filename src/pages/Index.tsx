@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { Sun, Moon, Menu, X, Clock, DollarSign, TrendingUp } from 'lucide-react';
 import { PrivacyPolicyModal } from '@/components/PrivacyPolicyModal';
+import { CookiePolicyModal } from '@/components/CookiePolicyModal';
+import { CookieBanner } from '@/components/CookieBanner';
 
 // --- Main Components ---
 
@@ -383,12 +385,17 @@ const Footer = ({ theme }: { theme: string }) => {
                         <a href="https://cal.com/marcecv/30min" target="_blank" rel="noopener noreferrer" className="animated-border-btn cta bg-cyan-500 text-white">
                            <span className="btn-text">Prenota una chiamata</span>
                         </a>
-                        <div className="mt-4">
+                        <div className="mt-4 space-x-4">
                             <PrivacyPolicyModal>
                                 <button className="text-gray-400 hover:text-white transition-colors text-sm underline">
                                     Privacy Policy
                                 </button>
                             </PrivacyPolicyModal>
+                            <CookiePolicyModal>
+                                <button className="text-gray-400 hover:text-white transition-colors text-sm underline">
+                                    Cookie Policy
+                                </button>
+                            </CookiePolicyModal>
                         </div>
                     </div>
                     <div className="md:col-span-4">
@@ -457,6 +464,9 @@ export default function Index() {
                 <Hero theme={theme} />
             </main>
             <Footer theme={theme} />
+            
+            {/* Cookie Banner */}
+            <CookieBanner />
         </div>
     );
 }
