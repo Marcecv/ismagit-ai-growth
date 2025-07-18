@@ -11,6 +11,7 @@ const navLinks = [
     { id: 'vantaggi', href: '#vantaggi-strategici', label: 'Vantaggi' },
     { id: 'servizi', href: '#servizi', label: 'Servizi' },
     { id: 'chi-sono', href: 'https://www.linkedin.com/in/marcelo-cavaldid/', label: 'Chi sono', external: true },
+    { id: 'laboratorio-ia', href: 'https://lab.ismagit.com', label: 'Laboratorio IA', external: true },
     { id: 'contatti', href: 'https://cal.com/marcecv/30min', label: 'Contattami', external: true },
 ];
 
@@ -387,10 +388,10 @@ const Footer = ({ theme }: { theme: string }) => {
                         </a>
                     </div>
                     <div className="md:col-span-8 grid grid-cols-2 gap-8">
-                        <div>
+                         <div>
                             <h4 className="font-bold text-white mb-4">Menu</h4>
                             <ul className="space-y-2">
-                                {navLinks.map(link => (
+                                {navLinks.filter(link => link.id !== 'laboratorio-ia').map(link => (
                                     <li key={link.id}>
                                         <a href={link.href} 
                                            target={link.external ? '_blank' : '_self'}
@@ -400,6 +401,12 @@ const Footer = ({ theme }: { theme: string }) => {
                                         </a>
                                     </li>
                                 ))}
+                                <li>
+                                    <a href="https://lab.ismagit.com" 
+                                       className="text-gray-400 hover:text-white transition-colors">
+                                        Laboratorio IA
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div>
