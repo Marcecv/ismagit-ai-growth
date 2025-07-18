@@ -11,7 +11,7 @@ const navLinks = [
     { id: 'vantaggi', href: '#vantaggi-strategici', label: 'Vantaggi' },
     { id: 'servizi', href: '#servizi', label: 'Servizi' },
     { id: 'chi-sono', href: 'https://www.linkedin.com/in/marcelo-cavaldid/', label: 'Chi sono', external: true },
-    { id: 'laboratorio-ia', href: 'https://lab.ismagit.com', label: 'Laboratorio IA', external: true },
+    { id: 'laboratorio-ia', href: 'https://lab.ismagit.com', label: 'Laboratorio IA', external: false },
     { id: 'contatti', href: 'https://cal.com/marcecv/30min', label: 'Contattami', external: true },
 ];
 
