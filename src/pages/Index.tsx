@@ -11,7 +11,7 @@ const navLinks = [
     { id: 'vantaggi', href: '#vantaggi-strategici', label: 'Vantaggi' },
     { id: 'servizi', href: '#servizi', label: 'Servizi' },
     { id: 'chi-sono', href: 'https://www.linkedin.com/in/marcelo-cavaldid/', label: 'Chi sono', external: true },
-    { id: 'laboratorio-ia', href: 'https://lab.ismagit.com', label: 'Laboratorio IA', external: false },
+    { id: 'laboratorio-ia', href: 'https://lab.ismagit.com', label: 'Laboratorio IA', external: true },
     { id: 'contatti', href: 'https://cal.com/marcecv/30min', label: 'Contattami', external: true },
 ];
 
@@ -144,7 +144,7 @@ const Header = ({ theme, toggleTheme }: { theme: string; toggleTheme: () => void
                                 href={link.href} 
                                 ref={el => tabsRef.current[index] = el}
                                 onClick={(e) => handleNavClick(e, link)}
-                                target={link.external ? '_blank' : '_self'}
+                                target={link.id === 'laboratorio-ia' ? '_self' : (link.external ? '_blank' : '_self')}
                                 rel={link.external ? 'noopener noreferrer' : ''}
                                 className={`relative z-10 px-5 py-1.5 rounded-lg text-sm font-semibold transition-colors duration-300 ${activeTab === link.id ? 'text-white' : (theme === 'light' ? 'text-gray-600 hover:text-black' : 'text-gray-300 hover:text-white')}`}
                             >
