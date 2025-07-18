@@ -12,7 +12,7 @@ export const CookiePolicyModal: React.FC<CookiePolicyModalProps> = ({ children }
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+      <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto" style={{ backgroundColor: '#171717', borderColor: '#333' }}>
         <CookiePolicy />
       </DialogContent>
     </Dialog>

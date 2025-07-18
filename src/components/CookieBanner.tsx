@@ -105,51 +105,48 @@ export const CookieBanner = () => {
   return (
     <>
       {/* Cookie Banner */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-sm border-t border-border">
-        <Card className="max-w-4xl mx-auto">
-          <CardContent className="p-6">
-            <div className="flex items-start gap-4">
-              <Cookie className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-              <div className="flex-1 space-y-4">
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Utilizziamo i cookie</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Utilizziamo cookie necessari per il funzionamento del sito e cookie opzionali per analisi e marketing. 
-                    I cookie ci aiutano a migliorare la tua esperienza di navigazione e a personalizzare i contenuti. 
-                    Puoi scegliere quali cookie accettare o gestire le tue preferenze.
-                  </p>
-                </div>
-                
-                <div className="flex flex-wrap gap-3">
-                  <Button onClick={acceptAll} className="bg-primary text-primary-foreground hover:bg-primary/90">
-                    Accetta tutti
-                  </Button>
-                  <Button variant="outline" onClick={rejectNonEssential}>
-                    Solo necessari
-                  </Button>
-                  <Button variant="outline" onClick={() => setShowPreferences(true)}>
-                    <Settings className="h-4 w-4 mr-2" />
-                    Personalizza
-                  </Button>
-                </div>
+      <div className="fixed bottom-0 left-0 right-0 z-50 p-4" style={{ backgroundColor: '#171717' }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="p-4">
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex-1">
+                <p className="text-sm text-white/90 leading-relaxed">
+                  Utilizziamo cookie necessari per il funzionamento del sito e cookie opzionali per analisi e marketing.
+                </p>
               </div>
               
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={rejectNonEssential}
-                className="flex-shrink-0"
-              >
-                <X className="h-4 w-4" />
-              </Button>
+              <div className="flex gap-3">
+                <Button 
+                  onClick={acceptAll} 
+                  className="bg-white text-black hover:bg-white/90 px-4 py-2 text-sm"
+                >
+                  Accetta tutti
+                </Button>
+                <Button 
+                  onClick={rejectNonEssential}
+                  className="border border-white text-white hover:bg-white/10 px-4 py-2 text-sm"
+                  style={{ backgroundColor: '#171717' }}
+                >
+                  Rifiuta
+                </Button>
+                <Button 
+                  variant="outline" 
+                  onClick={() => setShowPreferences(true)}
+                  className="border border-white text-white hover:bg-white/10 px-4 py-2 text-sm"
+                  style={{ backgroundColor: '#171717' }}
+                >
+                  <Settings className="h-4 w-4 mr-2" />
+                  Personalizza
+                </Button>
+              </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
 
       {/* Preferences Modal */}
       <Dialog open={showPreferences} onOpenChange={setShowPreferences}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl" style={{ backgroundColor: '#171717', borderColor: '#333' }}>
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <Settings className="h-5 w-5" />

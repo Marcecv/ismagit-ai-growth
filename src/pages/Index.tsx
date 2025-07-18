@@ -385,18 +385,6 @@ const Footer = ({ theme }: { theme: string }) => {
                         <a href="https://cal.com/marcecv/30min" target="_blank" rel="noopener noreferrer" className="animated-border-btn cta bg-cyan-500 text-white">
                            <span className="btn-text">Prenota una chiamata</span>
                         </a>
-                        <div className="mt-4 space-x-4">
-                            <PrivacyPolicyModal>
-                                <button className="text-gray-400 hover:text-white transition-colors text-sm underline">
-                                    Privacy Policy
-                                </button>
-                            </PrivacyPolicyModal>
-                            <CookiePolicyModal>
-                                <button className="text-gray-400 hover:text-white transition-colors text-sm underline">
-                                    Cookie Policy
-                                </button>
-                            </CookiePolicyModal>
-                        </div>
                     </div>
                     <div className="md:col-span-4">
                         <h4 className="font-bold text-white mb-4">Menu</h4>
@@ -411,6 +399,24 @@ const Footer = ({ theme }: { theme: string }) => {
                                     </a>
                                 </li>
                             ))}
+                        </ul>
+                        
+                        <h4 className="font-bold text-white mb-4 mt-8">Normative</h4>
+                        <ul className="space-y-2">
+                            <li>
+                                <PrivacyPolicyModal>
+                                    <button className="text-gray-400 hover:text-white transition-colors text-left">
+                                        Privacy Policy
+                                    </button>
+                                </PrivacyPolicyModal>
+                            </li>
+                            <li>
+                                <CookiePolicyModal>
+                                    <button className="text-gray-400 hover:text-white transition-colors text-left">
+                                        Cookie Policy
+                                    </button>
+                                </CookiePolicyModal>
+                            </li>
                         </ul>
                     </div>
                      <div className="md:col-span-4">
