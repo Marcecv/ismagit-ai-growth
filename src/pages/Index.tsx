@@ -400,8 +400,9 @@ const Footer = ({ theme }: { theme: string }) => {
                                 </li>
                             ))}
                         </ul>
-                        
-                        <h4 className="font-bold text-white mb-4 mt-8">Normative</h4>
+                    </div>
+                     <div className="md:col-span-4">
+                        <h4 className="font-bold text-white mb-4">Normative</h4>
                         <ul className="space-y-2">
                             <li>
                                 <PrivacyPolicyModal>
@@ -418,9 +419,6 @@ const Footer = ({ theme }: { theme: string }) => {
                                 </CookiePolicyModal>
                             </li>
                         </ul>
-                    </div>
-                     <div className="md:col-span-4">
-                        {/* Spazio per il testo verticale */}
                     </div>
                 </div>
                 <div className="mt-16 border-t border-neutral-800 pt-8 text-center text-gray-500 text-sm">
