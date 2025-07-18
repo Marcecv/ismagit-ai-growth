@@ -201,9 +201,26 @@ All colors MUST be HSL.
     mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
   }
   
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: infinite-scroll 30s linear infinite;
+  }
+  
   @media (max-width: 768px) {
     .scroll-mask {
       mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+    }
+    
+    .animate-scroll {
+      animation: infinite-scroll 20s linear infinite;
     }
   }
 }

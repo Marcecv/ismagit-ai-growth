@@ -45,7 +45,6 @@ const featureTabsData = [
 const logos = [
     "https://ik.imagekit.io/mcv/11.png?updatedAt=1752661447457",
     "https://ik.imagekit.io/mcv/5.png?updatedAt=1752661443340",
-    "https://ik.imagekit.io/mcv/8.png?updatedAt=1752661443326",
     "https://ik.imagekit.io/mcv/9.png?updatedAt=1752661443299",
     "https://ik.imagekit.io/mcv/10.png?updatedAt=1752661443306",
     "https://ik.imagekit.io/mcv/4.png?updatedAt=1752661443208",
@@ -53,7 +52,9 @@ const logos = [
     "https://ik.imagekit.io/mcv/7.png?updatedAt=1752661443126",
     "https://ik.imagekit.io/mcv/3.png?updatedAt=1752661443069",
     "https://ik.imagekit.io/mcv/1.png?updatedAt=1752661443060",
-    "https://ik.imagekit.io/mcv/2.png?updatedAt=1752661443061"
+    "https://ik.imagekit.io/mcv/2.png?updatedAt=1752661443061",
+    "https://ik.imagekit.io/mcv/pinecode%20(2).png?updatedAt=1752879977615",
+    "https://ik.imagekit.io/mcv/vercel.png?updatedAt=1752879990583"
 ];
 
 const solutionsData = [
