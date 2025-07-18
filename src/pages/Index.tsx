@@ -386,39 +386,41 @@ const Footer = ({ theme }: { theme: string }) => {
                            <span className="btn-text">Prenota una chiamata</span>
                         </a>
                     </div>
-                    <div className="md:col-span-4">
-                        <h4 className="font-bold text-white mb-4">Menu</h4>
-                        <ul className="space-y-2">
-                            {navLinks.map(link => (
-                                <li key={link.id}>
-                                    <a href={link.href} 
-                                       target={link.external ? '_blank' : '_self'}
-                                       rel={link.external ? 'noopener noreferrer' : ''}
-                                       className="text-gray-400 hover:text-white transition-colors">
-                                        {link.label}
-                                    </a>
+                    <div className="md:col-span-8 grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 className="font-bold text-white mb-4">Menu</h4>
+                            <ul className="space-y-2">
+                                {navLinks.map(link => (
+                                    <li key={link.id}>
+                                        <a href={link.href} 
+                                           target={link.external ? '_blank' : '_self'}
+                                           rel={link.external ? 'noopener noreferrer' : ''}
+                                           className="text-gray-400 hover:text-white transition-colors">
+                                            {link.label}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="font-bold text-white mb-4">Normative</h4>
+                            <ul className="space-y-2">
+                                <li>
+                                    <PrivacyPolicyModal>
+                                        <button className="text-gray-400 hover:text-white transition-colors text-left">
+                                            Privacy Policy
+                                        </button>
+                                    </PrivacyPolicyModal>
                                 </li>
-                            ))}
-                        </ul>
-                    </div>
-                     <div className="md:col-span-4">
-                        <h4 className="font-bold text-white mb-4">Normative</h4>
-                        <ul className="space-y-2">
-                            <li>
-                                <PrivacyPolicyModal>
-                                    <button className="text-gray-400 hover:text-white transition-colors text-left">
-                                        Privacy Policy
-                                    </button>
-                                </PrivacyPolicyModal>
-                            </li>
-                            <li>
-                                <CookiePolicyModal>
-                                    <button className="text-gray-400 hover:text-white transition-colors text-left">
-                                        Cookie Policy
-                                    </button>
-                                </CookiePolicyModal>
-                            </li>
-                        </ul>
+                                <li>
+                                    <CookiePolicyModal>
+                                        <button className="text-gray-400 hover:text-white transition-colors text-left">
+                                            Cookie Policy
+                                        </button>
+                                    </CookiePolicyModal>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="mt-16 border-t border-neutral-800 pt-8 text-center text-gray-500 text-sm">
