@@ -313,8 +313,19 @@ const Hero = ({ theme }: { theme: string }) => {
                 </h3>
                 <div className="relative w-full max-w-5xl mx-auto overflow-hidden scroll-mask">
                     <div className="flex animate-scroll">
-                        {[...logos, ...logos, ...logos].map((logo, index) => (
-                            <img key={index} src={logo} alt={`Logo ${index + 1}`} className="h-12 md:h-16 w-auto mx-6 md:mx-12 flex-shrink-0" />
+                        {[...logos, ...logos].map((logo, index) => (
+                            <img 
+                                key={index} 
+                                src={logo} 
+                                alt={`Logo ${(index % logos.length) + 1}`} 
+                                className="h-12 md:h-16 w-auto mx-6 md:mx-12 flex-shrink-0" 
+                                loading="lazy"
+                                onError={(e) => { 
+                                    console.log(`Errore caricamento logo: ${logo}`);
+                                    (e.currentTarget as HTMLImageElement).style.display = 'none'; 
+                                }}
+                                onLoad={() => console.log(`Logo caricato: ${logo}`)}
+                            />
                         ))}
                     </div>
                 </div>
