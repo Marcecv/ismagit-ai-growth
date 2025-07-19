@@ -210,8 +210,34 @@ All colors MUST be HSL.
     }
   }
   
+  @keyframes infinite-scroll-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes infinite-scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
   .animate-scroll {
     animation: infinite-scroll 30s linear infinite;
+  }
+  
+  .animate-scroll-right {
+    animation: infinite-scroll-right 35s linear infinite;
+  }
+  
+  .animate-scroll-left {
+    animation: infinite-scroll-left 25s linear infinite;
   }
   
   @media (max-width: 768px) {
@@ -221,6 +247,14 @@ All colors MUST be HSL.
     
     .animate-scroll {
       animation: infinite-scroll 20s linear infinite;
+    }
+    
+    .animate-scroll-right {
+      animation: infinite-scroll-right 25s linear infinite;
+    }
+    
+    .animate-scroll-left {
+      animation: infinite-scroll-left 18s linear infinite;
     }
   }
 }
