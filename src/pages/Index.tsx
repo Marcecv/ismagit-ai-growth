@@ -309,14 +309,12 @@ const Hero = ({ theme }: { theme: string }) => {
             {/* Sezione I Tools */}
             <div className="mt-24 text-center">
                 <div className="mb-12">
-                    <div className="inline-block px-6 py-3 rounded-full border-2 border-cyan-400 mb-4">
-                        <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-cyan-400">
-                            I Tools
-                        </h2>
+                    <div className={`inline-block border text-sm font-medium px-4 py-1 rounded-md ${theme === 'light' ? 'border-cyan-500/40 text-cyan-700' : 'border-cyan-500/40 text-cyan-400'}`}>
+                        I Tools
                     </div>
-                    <p className={`text-lg font-medium ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
+                    <h2 className={`mt-4 text-2xl md:text-3xl font-medium tracking-tight ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
                         Utilizzo costantemente alcuni tra i migliori strumenti sul mercato.
-                    </p>
+                    </h2>
                 </div>
                 
                 {/* Carosello singolo da destra a sinistra */}
