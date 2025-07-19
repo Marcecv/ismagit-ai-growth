@@ -309,71 +309,32 @@ const Hero = ({ theme }: { theme: string }) => {
             {/* Sezione I Tools */}
             <div className="mt-24 text-center">
                 <div className="mb-12">
-                    <h2 className={`text-2xl md:text-3xl font-medium tracking-tight mb-4 ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
-                        I Tools
-                    </h2>
+                    <div className="inline-block px-6 py-3 rounded-full border-2 border-cyan-400 mb-4">
+                        <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-cyan-400">
+                            I Tools
+                        </h2>
+                    </div>
                     <p className={`text-lg font-medium ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
                         Utilizzo costantemente alcuni tra i migliori strumenti sul mercato.
                     </p>
                 </div>
                 
-                {/* Tre caroselli con direzioni diverse */}
-                <div className="space-y-6">
-                    {/* Prima fila - da sinistra a destra */}
-                    <div className="relative w-full max-w-6xl mx-auto overflow-hidden scroll-mask">
-                        <div className="flex animate-scroll-right">
-                            {[...logos.slice(0, 4), ...logos.slice(0, 4), ...logos.slice(0, 4)].map((logo, index) => (
-                                <img 
-                                    key={`row1-${index}`}
-                                    src={logo} 
-                                    alt={`Logo ${(index % 4) + 1}`} 
-                                    className="h-10 md:h-14 w-auto mx-4 md:mx-8 flex-shrink-0" 
-                                    loading="lazy"
-                                    onError={(e) => { 
-                                        console.log(`Errore caricamento logo: ${logo}`);
-                                        (e.currentTarget as HTMLImageElement).style.display = 'none'; 
-                                    }}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                    
-                    {/* Seconda fila - da destra a sinistra */}
-                    <div className="relative w-full max-w-6xl mx-auto overflow-hidden scroll-mask">
-                        <div className="flex animate-scroll-left">
-                            {[...logos.slice(4, 8), ...logos.slice(4, 8), ...logos.slice(4, 8)].map((logo, index) => (
-                                <img 
-                                    key={`row2-${index}`}
-                                    src={logo} 
-                                    alt={`Logo ${(index % 4) + 5}`} 
-                                    className="h-10 md:h-14 w-auto mx-4 md:mx-8 flex-shrink-0" 
-                                    loading="lazy"
-                                    onError={(e) => { 
-                                        console.log(`Errore caricamento logo: ${logo}`);
-                                        (e.currentTarget as HTMLImageElement).style.display = 'none'; 
-                                    }}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                    
-                    {/* Terza fila - da sinistra a destra */}
-                    <div className="relative w-full max-w-6xl mx-auto overflow-hidden scroll-mask">
-                        <div className="flex animate-scroll-right">
-                            {[...logos.slice(8, 12), ...logos.slice(8, 12), ...logos.slice(8, 12)].map((logo, index) => (
-                                <img 
-                                    key={`row3-${index}`}
-                                    src={logo} 
-                                    alt={`Logo ${(index % 4) + 9}`} 
-                                    className="h-10 md:h-14 w-auto mx-4 md:mx-8 flex-shrink-0" 
-                                    loading="lazy"
-                                    onError={(e) => { 
-                                        console.log(`Errore caricamento logo: ${logo}`);
-                                        (e.currentTarget as HTMLImageElement).style.display = 'none'; 
-                                    }}
-                                />
-                            ))}
-                        </div>
+                {/* Carosello singolo da destra a sinistra */}
+                <div className="relative w-full max-w-6xl mx-auto overflow-hidden scroll-mask">
+                    <div className="flex animate-scroll-left">
+                        {[...logos, ...logos, ...logos].map((logo, index) => (
+                            <img 
+                                key={`logo-${index}`}
+                                src={logo} 
+                                alt={`Logo ${(index % logos.length) + 1}`} 
+                                className="h-10 md:h-14 w-auto mx-4 md:mx-8 flex-shrink-0" 
+                                loading="lazy"
+                                onError={(e) => { 
+                                    console.log(`Errore caricamento logo: ${logo}`);
+                                    (e.currentTarget as HTMLImageElement).style.display = 'none'; 
+                                }}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
