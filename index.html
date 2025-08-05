@@ -54,14 +54,28 @@
     <style>
       /* Personalizzazione aggiuntiva per il chatbot */
       .n8n-chat-trigger {
-        background: linear-gradient(135deg, #22D3EE, #0891b2) !important;
-        border: 2px solid rgba(34, 211, 238, 0.2) !important;
+        background: #1f2937 !important;
+        border: 2px solid rgba(31, 41, 55, 0.2) !important;
         transition: all 0.3s ease !important;
+        color: #ffffff !important;
       }
       .n8n-chat-trigger:hover {
         transform: scale(1.05) !important;
-        box-shadow: 0 8px 30px rgba(34, 211, 238, 0.4) !important;
+        box-shadow: 0 8px 30px rgba(31, 41, 55, 0.4) !important;
+        background: #374151 !important;
       }
+      
+      /* Modalità scura - pulsante bianco */
+      .dark .n8n-chat-trigger {
+        background: #ffffff !important;
+        border: 2px solid rgba(255, 255, 255, 0.2) !important;
+        color: #1f2937 !important;
+      }
+      .dark .n8n-chat-trigger:hover {
+        background: #f8fafc !important;
+        box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3) !important;
+      }
+      
       .n8n-chat-window {
         border: 1px solid rgba(34, 211, 238, 0.2) !important;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
@@ -69,9 +83,6 @@
       .dark .n8n-chat-window {
         background-color: #1f2937 !important;
         border: 1px solid rgba(34, 211, 238, 0.3) !important;
-      }
-      .dark .n8n-chat-trigger {
-        background: linear-gradient(135deg, #22D3EE, #0891b2) !important;
       }
     </style>
   </body>
