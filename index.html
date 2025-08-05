@@ -33,7 +33,7 @@
         ],
         i18n: {
           en: {
-            title: '👋 Ciao!',
+            title: '',
             subtitle: "Ciao! 🤖 Inizia una chat. Siamo qui per aiutarti 24/7.",
             footer: '',
             getStarted: 'Nuova Conversazione',
@@ -111,6 +111,14 @@
       
       .dark #n8n-chat .chat-toggle:hover {
         background: var(--chat--toggle--hover--background) !important;
+      }
+      
+      /* Nascondi "Powered by n8n" */
+      #n8n-chat .chat-footer,
+      #n8n-chat [class*="footer"],
+      #n8n-chat .powered-by,
+      #n8n-chat a[href*="n8n.io"] {
+        display: none !important;
       }
     </style>
   </body>
