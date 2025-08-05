@@ -31,7 +31,7 @@
           '👋 Ciao! Sono ISMAGIT, l\'assistente IA di questo sito 🤖\n\nPosso aiutarti a capire meglio cosa facciamo o rispondere alle tue domande?'
         ],
         theme: {
-          primaryColor: '#22D3EE',
+          primaryColor: '#1f2937',
           backgroundColor: '#ffffff',
           textColor: '#1f2937',
           chatInputBackground: '#f8fafc',
@@ -42,38 +42,65 @@
           userMessageTextColor: '#ffffff',
           headerBackground: '#1f2937',
           headerTextColor: '#ffffff'
-        },
-        chatTrigger: {
-          backgroundColor: '#22D3EE',
-          iconColor: '#ffffff',
-          borderRadius: '50%',
-          boxShadow: '0 4px 20px rgba(34, 211, 238, 0.3)'
         }
       });
     </script>
     <style>
-      /* Personalizzazione aggiuntiva per il chatbot */
-      .n8n-chat-trigger {
+      /* Personalizzazione aggiuntiva per il chatbot - Override completo */
+      
+      /* Selettori più specifici per sovrascrivere tutti gli stili di default */
+      [data-n8n-chat] button[class*="trigger"],
+      .n8n-chat-trigger,
+      button[data-n8n-chat-trigger],
+      div[data-n8n-chat] > button,
+      #n8n-chat button {
         background: #1f2937 !important;
+        background-color: #1f2937 !important;
         border: 2px solid rgba(31, 41, 55, 0.2) !important;
         transition: all 0.3s ease !important;
         color: #ffffff !important;
+        fill: #ffffff !important;
       }
-      .n8n-chat-trigger:hover {
+      
+      [data-n8n-chat] button[class*="trigger"]:hover,
+      .n8n-chat-trigger:hover,
+      button[data-n8n-chat-trigger]:hover,
+      div[data-n8n-chat] > button:hover,
+      #n8n-chat button:hover {
         transform: scale(1.05) !important;
         box-shadow: 0 8px 30px rgba(31, 41, 55, 0.4) !important;
         background: #374151 !important;
+        background-color: #374151 !important;
       }
       
       /* Modalità scura - pulsante bianco */
-      .dark .n8n-chat-trigger {
+      .dark [data-n8n-chat] button[class*="trigger"],
+      .dark .n8n-chat-trigger,
+      .dark button[data-n8n-chat-trigger],
+      .dark div[data-n8n-chat] > button,
+      .dark #n8n-chat button {
         background: #ffffff !important;
+        background-color: #ffffff !important;
         border: 2px solid rgba(255, 255, 255, 0.2) !important;
         color: #1f2937 !important;
+        fill: #1f2937 !important;
       }
-      .dark .n8n-chat-trigger:hover {
+      
+      .dark [data-n8n-chat] button[class*="trigger"]:hover,
+      .dark .n8n-chat-trigger:hover,
+      .dark button[data-n8n-chat-trigger]:hover,
+      .dark div[data-n8n-chat] > button:hover,
+      .dark #n8n-chat button:hover {
         background: #f8fafc !important;
+        background-color: #f8fafc !important;
         box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3) !important;
+      }
+      
+      /* Stile per le icone SVG all'interno del pulsante */
+      [data-n8n-chat] button svg,
+      .n8n-chat-trigger svg,
+      button[data-n8n-chat-trigger] svg {
+        fill: currentColor !important;
       }
       
       .n8n-chat-window {
