@@ -7,6 +7,7 @@
     <meta name="description" content="Soluzioni IA personalizzate per automatizzare marketing e processi. Riduci costi, aumenta efficienza e scala il tuo business." />
     <link rel="icon" href="https://ik.imagekit.io/mcv/logo%20ismagit%20(7).png?updatedAt=1752716194453" type="image/png">
     <meta name="author" content="Ismagit" />
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
     <meta property="og:title" content="Ismagit" />
     <meta property="og:description" content="Soluzioni IA personalizzate per automatizzare marketing e processi. Riduci costi, aumenta efficienza e scala il tuo business." />
@@ -21,5 +22,12 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+      createChat({
+        webhookUrl: 'https://iswebhook.ismagit.it/webhook/4bfacec5-c32e-4e41-9b13-5b9b5d77aed6/chat'
+      });
+    </script>
   </body>
 </html>
