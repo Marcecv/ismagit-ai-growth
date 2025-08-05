@@ -28,88 +28,89 @@
       createChat({
         webhookUrl: 'https://iswebhook.ismagit.it/webhook/4bfacec5-c32e-4e41-9b13-5b9b5d77aed6/chat',
         initialMessages: [
-          '👋 Ciao! Sono ISMAGIT, l\'assistente IA di questo sito 🤖\n\nPosso aiutarti a capire meglio cosa facciamo o rispondere alle tue domande?'
+          '👋 Ciao! Sono ISMAGIT, l\'assistente IA di questo sito 🤖',
+          'Posso aiutarti a capire meglio cosa facciamo o rispondere alle tue domande?'
         ],
-        theme: {
-          primaryColor: '#1f2937',
-          backgroundColor: '#ffffff',
-          textColor: '#1f2937',
-          chatInputBackground: '#f8fafc',
-          chatInputBorder: '#e2e8f0',
-          botMessageBackground: '#f0fdff',
-          botMessageTextColor: '#1f2937',
-          userMessageBackground: '#22D3EE',
-          userMessageTextColor: '#ffffff',
-          headerBackground: '#1f2937',
-          headerTextColor: '#ffffff'
-        }
+        i18n: {
+          en: {
+            title: '👋 Ciao!',
+            subtitle: "Sono ISMAGIT, l'assistente IA di questo sito 🤖",
+            footer: '',
+            getStarted: 'Nuova Conversazione',
+            inputPlaceholder: 'Scrivi la tua domanda...',
+          },
+        },
+        showWelcomeScreen: true,
+        loadPreviousSession: true
       });
     </script>
     <style>
-      /* Personalizzazione aggiuntiva per il chatbot - Override completo */
+      /* Personalizzazione usando le variabili CSS ufficiali di n8n */
+      :root {
+        --chat--color-primary: #22D3EE;
+        --chat--color-primary-shade-50: #06b6d4;
+        --chat--color-primary-shade-100: #0891b2;
+        --chat--color-secondary: #22D3EE;
+        --chat--color-secondary-shade-50: #06b6d4;
+        --chat--color-white: #ffffff;
+        --chat--color-light: #f8fafc;
+        --chat--color-light-shade-50: #e2e8f0;
+        --chat--color-light-shade-100: #cbd5e1;
+        --chat--color-medium: #64748b;
+        --chat--color-dark: #1f2937;
+        --chat--color-disabled: #9ca3af;
+        --chat--color-typing: #6b7280;
+
+        --chat--toggle--background: #1f2937;
+        --chat--toggle--hover--background: #374151;
+        --chat--toggle--active--background: #4b5563;
+        --chat--toggle--color: #ffffff;
+        --chat--toggle--size: 64px;
+
+        --chat--header--background: #1f2937;
+        --chat--header--color: #ffffff;
+        
+        --chat--message--bot--background: #f0fdff;
+        --chat--message--bot--color: #1f2937;
+        --chat--message--user--background: #22D3EE;
+        --chat--message--user--color: #ffffff;
+      }
+
+      /* Modalità scura */
+      .dark {
+        --chat--toggle--background: #ffffff;
+        --chat--toggle--hover--background: #f8fafc;
+        --chat--toggle--active--background: #e2e8f0;
+        --chat--toggle--color: #1f2937;
+        
+        --chat--color-dark: #ffffff;
+        --chat--color-light: #1f2937;
+        --chat--header--background: #ffffff;
+        --chat--header--color: #1f2937;
+        
+        --chat--message--bot--background: #374151;
+        --chat--message--bot--color: #ffffff;
+      }
       
-      /* Selettori più specifici per sovrascrivere tutti gli stili di default */
-      [data-n8n-chat] button[class*="trigger"],
-      .n8n-chat-trigger,
-      button[data-n8n-chat-trigger],
-      div[data-n8n-chat] > button,
-      #n8n-chat button {
-        background: #1f2937 !important;
-        background-color: #1f2937 !important;
-        border: 2px solid rgba(31, 41, 55, 0.2) !important;
+      /* Override aggiuntivi per garantire il cambio colore */
+      #n8n-chat .chat-toggle {
+        background: var(--chat--toggle--background) !important;
+        color: var(--chat--toggle--color) !important;
         transition: all 0.3s ease !important;
-        color: #ffffff !important;
-        fill: #ffffff !important;
       }
       
-      [data-n8n-chat] button[class*="trigger"]:hover,
-      .n8n-chat-trigger:hover,
-      button[data-n8n-chat-trigger]:hover,
-      div[data-n8n-chat] > button:hover,
-      #n8n-chat button:hover {
+      #n8n-chat .chat-toggle:hover {
+        background: var(--chat--toggle--hover--background) !important;
         transform: scale(1.05) !important;
-        box-shadow: 0 8px 30px rgba(31, 41, 55, 0.4) !important;
-        background: #374151 !important;
-        background-color: #374151 !important;
       }
       
-      /* Modalità scura - pulsante bianco */
-      .dark [data-n8n-chat] button[class*="trigger"],
-      .dark .n8n-chat-trigger,
-      .dark button[data-n8n-chat-trigger],
-      .dark div[data-n8n-chat] > button,
-      .dark #n8n-chat button {
-        background: #ffffff !important;
-        background-color: #ffffff !important;
-        border: 2px solid rgba(255, 255, 255, 0.2) !important;
-        color: #1f2937 !important;
-        fill: #1f2937 !important;
+      .dark #n8n-chat .chat-toggle {
+        background: var(--chat--toggle--background) !important;
+        color: var(--chat--toggle--color) !important;
       }
       
-      .dark [data-n8n-chat] button[class*="trigger"]:hover,
-      .dark .n8n-chat-trigger:hover,
-      .dark button[data-n8n-chat-trigger]:hover,
-      .dark div[data-n8n-chat] > button:hover,
-      .dark #n8n-chat button:hover {
-        background: #f8fafc !important;
-        background-color: #f8fafc !important;
-        box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3) !important;
-      }
-      
-      /* Stile per le icone SVG all'interno del pulsante */
-      [data-n8n-chat] button svg,
-      .n8n-chat-trigger svg,
-      button[data-n8n-chat-trigger] svg {
-        fill: currentColor !important;
-      }
-      
-      .n8n-chat-window {
-        border: 1px solid rgba(34, 211, 238, 0.2) !important;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
-      }
-      .dark .n8n-chat-window {
-        background-color: #1f2937 !important;
-        border: 1px solid rgba(34, 211, 238, 0.3) !important;
+      .dark #n8n-chat .chat-toggle:hover {
+        background: var(--chat--toggle--hover--background) !important;
       }
     </style>
   </body>
