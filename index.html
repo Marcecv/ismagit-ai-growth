@@ -113,22 +113,48 @@
         background: var(--chat--toggle--hover--background) !important;
       }
       
-      /* Nascondi solo "Powered by n8n" senza toccare l'input */
-      #n8n-chat .powered-by,
+      /* Nascondi completamente "Powered by n8n" */
+      #n8n-chat [class*="footer"]:has(a),
+      #n8n-chat div:has(a[href*="n8n"]),
       #n8n-chat a[href*="n8n.io"],
-      #n8n-chat [class*="powered"],
-      #n8n-chat span:contains("Powered by"),
-      #n8n-chat div:contains("n8n"):not(:has(input)):not(:has(textarea)) {
+      #n8n-chat a[href*="n8n.cloud"],
+      #n8n-chat *:contains("Powered by") {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
       }
       
-      /* Assicurati che l'input area sia visibile */
-      #n8n-chat input,
-      #n8n-chat textarea,
-      #n8n-chat [class*="input"],
+      /* Fixa lo styling della barra di input */
+      #n8n-chat .chat-input-container,
+      #n8n-chat [class*="input-container"],
       #n8n-chat [class*="chat-input"] {
-        display: block !important;
-        visibility: visible !important;
+        background: var(--chat--color-white) !important;
+        border: 1px solid var(--chat--color-light-shade-50) !important;
+        border-radius: 8px !important;
+        padding: 12px !important;
+        margin: 8px !important;
+      }
+      
+      #n8n-chat input,
+      #n8n-chat textarea {
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        color: var(--chat--color-dark) !important;
+        font-size: 14px !important;
+      }
+      
+      .dark #n8n-chat .chat-input-container,
+      .dark #n8n-chat [class*="input-container"],
+      .dark #n8n-chat [class*="chat-input"] {
+        background: var(--chat--color-dark) !important;
+        border-color: rgba(255, 255, 255, 0.2) !important;
+      }
+      
+      .dark #n8n-chat input,
+      .dark #n8n-chat textarea {
+        color: var(--chat--color-white) !important;
       }
     </style>
   </body>
