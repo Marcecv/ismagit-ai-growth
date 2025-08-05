@@ -28,19 +28,51 @@
       createChat({
         webhookUrl: 'https://iswebhook.ismagit.it/webhook/4bfacec5-c32e-4e41-9b13-5b9b5d77aed6/chat',
         initialMessages: [
-          'Ciao! 🤖\nInizia una chat. Siamo qui per aiutarti 24/7.'
+          '👋 Ciao! Sono ISMAGIT, l\'assistente IA di questo sito 🤖\n\nPosso aiutarti a capire meglio cosa facciamo o rispondere alle tue domande?'
         ],
         theme: {
-          primaryColor: '#06b6d4',
+          primaryColor: '#22D3EE',
           backgroundColor: '#ffffff',
           textColor: '#1f2937',
-          chatInputBackground: '#f9fafb',
-          chatInputBorder: '#e5e7eb',
-          botMessageBackground: '#f0f9ff',
-          userMessageBackground: '#06b6d4',
-          userMessageTextColor: '#ffffff'
+          chatInputBackground: '#f8fafc',
+          chatInputBorder: '#e2e8f0',
+          botMessageBackground: '#f0fdff',
+          botMessageTextColor: '#1f2937',
+          userMessageBackground: '#22D3EE',
+          userMessageTextColor: '#ffffff',
+          headerBackground: '#1f2937',
+          headerTextColor: '#ffffff'
+        },
+        chatTrigger: {
+          backgroundColor: '#22D3EE',
+          iconColor: '#ffffff',
+          borderRadius: '50%',
+          boxShadow: '0 4px 20px rgba(34, 211, 238, 0.3)'
         }
       });
     </script>
+    <style>
+      /* Personalizzazione aggiuntiva per il chatbot */
+      .n8n-chat-trigger {
+        background: linear-gradient(135deg, #22D3EE, #0891b2) !important;
+        border: 2px solid rgba(34, 211, 238, 0.2) !important;
+        transition: all 0.3s ease !important;
+      }
+      .n8n-chat-trigger:hover {
+        transform: scale(1.05) !important;
+        box-shadow: 0 8px 30px rgba(34, 211, 238, 0.4) !important;
+      }
+      .n8n-chat-window {
+        border: 1px solid rgba(34, 211, 238, 0.2) !important;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+      }
+      .dark .n8n-chat-window {
+        background-color: #1f2937 !important;
+        border: 1px solid rgba(34, 211, 238, 0.3) !important;
+      }
+      .dark .n8n-chat-trigger {
+        background: linear-gradient(135deg, #22D3EE, #0891b2) !important;
+      }
+    </style>
   </body>
 </html>
