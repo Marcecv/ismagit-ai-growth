@@ -113,12 +113,22 @@
         background: var(--chat--toggle--hover--background) !important;
       }
       
-      /* Nascondi "Powered by n8n" */
-      #n8n-chat .chat-footer,
-      #n8n-chat [class*="footer"],
+      /* Nascondi solo "Powered by n8n" senza toccare l'input */
       #n8n-chat .powered-by,
-      #n8n-chat a[href*="n8n.io"] {
+      #n8n-chat a[href*="n8n.io"],
+      #n8n-chat [class*="powered"],
+      #n8n-chat span:contains("Powered by"),
+      #n8n-chat div:contains("n8n"):not(:has(input)):not(:has(textarea)) {
         display: none !important;
+      }
+      
+      /* Assicurati che l'input area sia visibile */
+      #n8n-chat input,
+      #n8n-chat textarea,
+      #n8n-chat [class*="input"],
+      #n8n-chat [class*="chat-input"] {
+        display: block !important;
+        visibility: visible !important;
       }
     </style>
   </body>
