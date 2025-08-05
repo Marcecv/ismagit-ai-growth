@@ -26,7 +26,20 @@
       import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
       createChat({
-        webhookUrl: 'https://iswebhook.ismagit.it/webhook/4bfacec5-c32e-4e41-9b13-5b9b5d77aed6/chat'
+        webhookUrl: 'https://iswebhook.ismagit.it/webhook/4bfacec5-c32e-4e41-9b13-5b9b5d77aed6/chat',
+        initialMessages: [
+          'Ciao! 🤖\nInizia una chat. Siamo qui per aiutarti 24/7.'
+        ],
+        theme: {
+          primaryColor: '#06b6d4',
+          backgroundColor: '#ffffff',
+          textColor: '#1f2937',
+          chatInputBackground: '#f9fafb',
+          chatInputBorder: '#e5e7eb',
+          botMessageBackground: '#f0f9ff',
+          userMessageBackground: '#06b6d4',
+          userMessageTextColor: '#ffffff'
+        }
       });
     </script>
   </body>
