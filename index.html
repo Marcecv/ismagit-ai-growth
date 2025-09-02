@@ -7,7 +7,7 @@
     <meta name="description" content="Soluzioni IA personalizzate per automatizzare marketing e processi. Riduci costi, aumenta efficienza e scala il tuo business." />
     <link rel="icon" href="https://ik.imagekit.io/mcv/logo%20ismagit%20(7).png?updatedAt=1752716194453" type="image/png">
     <meta name="author" content="Ismagit" />
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    
 
     <meta property="og:title" content="Ismagit" />
     <meta property="og:description" content="Soluzioni IA personalizzate per automatizzare marketing e processi. Riduci costi, aumenta efficienza e scala il tuo business." />
@@ -22,96 +22,15 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script type="module">
-      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-      createChat({
-        webhookUrl: 'https://iswebhook.ismagit.it/webhook/4bfacec5-c32e-4e41-9b13-5b9b5d77aed6/chat',
-        initialMessages: [
-          '👋 Ciao! Sono ISMAGIT, l\'assistente IA di questo sito 🤖',
-          'Posso aiutarti a capire meglio cosa facciamo o rispondere alle tue domande?'
-        ],
-        i18n: {
-          en: {
-            title: '👋 Ciao!',
-            subtitle: "Inizia una chat. Siamo qui per aiutarti 24/7.",
-            footer: '',
-            getStarted: 'Nuova Conversazione',
-            inputPlaceholder: 'Scrivi la tua domanda...',
-          },
-        },
-        showWelcomeScreen: true,
-        loadPreviousSession: true
-      });
+    <!-- Start of OpenWidget (www.openwidget.com) code -->
+    <script>
+      window.__ow = window.__ow || {};
+      window.__ow.organizationId = "e36ea6d4-5e6c-4e02-8186-6e920edf1ed0";
+      window.__ow.integration_name = "manual_settings";
+      window.__ow.product_name = "openwidget";   
+      ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
     </script>
-    <style>
-      /* Personalizzazione usando le variabili CSS ufficiali di n8n */
-      :root {
-        --chat--color-primary: #22D3EE;
-        --chat--color-primary-shade-50: #06b6d4;
-        --chat--color-primary-shade-100: #0891b2;
-        --chat--color-secondary: #22D3EE;
-        --chat--color-secondary-shade-50: #06b6d4;
-        --chat--color-white: #ffffff;
-        --chat--color-light: #f8fafc;
-        --chat--color-light-shade-50: #e2e8f0;
-        --chat--color-light-shade-100: #cbd5e1;
-        --chat--color-medium: #64748b;
-        --chat--color-dark: #1f2937;
-        --chat--color-disabled: #9ca3af;
-        --chat--color-typing: #6b7280;
-
-        --chat--toggle--background: #1f2937;
-        --chat--toggle--hover--background: #374151;
-        --chat--toggle--active--background: #4b5563;
-        --chat--toggle--color: #ffffff;
-        --chat--toggle--size: 64px;
-
-        --chat--header--background: #1f2937;
-        --chat--header--color: #ffffff;
-        
-        --chat--message--bot--background: #f0fdff;
-        --chat--message--bot--color: #1f2937;
-        --chat--message--user--background: #22D3EE;
-        --chat--message--user--color: #ffffff;
-      }
-
-      /* Modalità scura */
-      .dark {
-        --chat--toggle--background: #ffffff;
-        --chat--toggle--hover--background: #f8fafc;
-        --chat--toggle--active--background: #e2e8f0;
-        --chat--toggle--color: #1f2937;
-        
-        --chat--color-dark: #ffffff;
-        --chat--color-light: #1f2937;
-        --chat--header--background: #ffffff;
-        --chat--header--color: #1f2937;
-        
-        --chat--message--bot--background: #374151;
-        --chat--message--bot--color: #ffffff;
-      }
-      
-      /* Override aggiuntivi per garantire il cambio colore */
-      #n8n-chat .chat-toggle {
-        background: var(--chat--toggle--background) !important;
-        color: var(--chat--toggle--color) !important;
-        transition: all 0.3s ease !important;
-      }
-      
-      #n8n-chat .chat-toggle:hover {
-        background: var(--chat--toggle--hover--background) !important;
-        transform: scale(1.05) !important;
-      }
-      
-      .dark #n8n-chat .chat-toggle {
-        background: var(--chat--toggle--background) !important;
-        color: var(--chat--toggle--color) !important;
-      }
-      
-      .dark #n8n-chat .chat-toggle:hover {
-        background: var(--chat--toggle--hover--background) !important;
-      }
-    </style>
+    <noscript>You need to <a href="https://www.openwidget.com/enable-javascript" rel="noopener nofollow">enable JavaScript</a> to use the communication tool powered by <a href="https://www.openwidget.com/" rel="noopener nofollow" target="_blank">OpenWidget</a></noscript>
+    <!-- End of OpenWidget code -->
   </body>
 </html>
