@@ -208,7 +208,7 @@ const Hero = ({ theme }: { theme: string }) => {
                         <span className={`${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>Libero il tuo </span>
                         <span className="text-cyan-500 dark:text-cyan-400">Potenziale di Crescita<BlinkingCursor /></span>
                     </h1>
-                    <p className={`text-base md:text-lg mt-8 transition-colors duration-500 ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'}`}>
+                    <p className={`mt-8 transition-colors duration-500 ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'}`} style={{ fontSize: 'clamp(0.9rem, 2.2vw, 1.0125rem)' }}>
                         Costruisco il tuo ecosistema di marketing AI su misura integrando agenti conversazionali (chat e voce), infrastrutture open source per l'automazione e sistemi per la generazione di contenuti.
                     </p>
                     {/* Pulsante Prenota una chiamata */}
