@@ -203,9 +203,10 @@ const Hero = ({ theme }: { theme: string }) => {
             {/* Blocco testo principale allineato a sinistra */}
             <div className="flex justify-start">
                 <div className="max-w-3xl text-left">
-                    <h1 className={`text-5xl md:text-7xl font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
+                    <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(2.55rem, 5vw, 3.825rem)' }}>
                         Integro l'AI nel tuo marketing. <br />
-                        <span className="text-cyan-500 dark:text-cyan-400">Libero il tuo Potenziale di Crescita<BlinkingCursor /></span>
+                        <span className={`${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>Libero il tuo </span>
+                        <span className="text-cyan-500 dark:text-cyan-400">Potenziale di Crescita<BlinkingCursor /></span>
                     </h1>
                     <p className={`text-base md:text-lg mt-8 transition-colors duration-500 ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'}`}>
                         Costruisco il tuo ecosistema di marketing AI su misura integrando agenti conversazionali (chat e voce), infrastrutture open source per l'automazione e sistemi per la generazione di contenuti.
