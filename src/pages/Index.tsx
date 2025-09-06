@@ -200,9 +200,9 @@ const Hero = ({ theme }: { theme: string }) => {
 
     return (
         <section className="container mx-auto px-6 pt-8 md:pt-16 pb-12 md:pb-20">
-            {/* Blocco testo principale allineato a sinistra */}
-            <div className="flex justify-start">
-                <div className="max-w-3xl text-left">
+            {/* Blocco testo principale allineato al centro */}
+            <div className="flex justify-center">
+                <div className="max-w-3xl text-center">
                     <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(2.55rem, 5vw, 3.825rem)' }}>
                         Integro l'AI nel tuo marketing. <br />
                         <span className={`${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>Libero il tuo </span>
