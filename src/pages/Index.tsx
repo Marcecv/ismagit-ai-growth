@@ -204,11 +204,11 @@ const Hero = ({ theme }: { theme: string }) => {
             <div className="flex justify-start">
                 <div className="max-w-3xl text-left">
                     <h1 className={`text-5xl md:text-7xl font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
-                        Il Tuo Partner per la Crescita<br />
-                        <span className="text-cyan-500 dark:text-cyan-400">Intelligente con IA<BlinkingCursor /></span>
+                        Integro l'AI nel tuo marketing. <br />
+                        <span className="text-cyan-500 dark:text-cyan-400">Libero il tuo Potenziale di Crescita<BlinkingCursor /></span>
                     </h1>
                     <p className={`text-base md:text-lg mt-8 transition-colors duration-500 ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'}`}>
-                        Automatizza marketing e processi aziendali con l'intelligenza artificiale: meno tempo sprecato, più risultati misurabili, grazie a soluzioni personalizzate e operative da subito.
+                        Costruisco il tuo ecosistema di marketing AI su misura integrando agenti conversazionali (chat e voce), infrastrutture open source per l'automazione e sistemi per la generazione di contenuti.
                     </p>
                     {/* Pulsante Prenota una chiamata */}
                     <div className="mt-8">
