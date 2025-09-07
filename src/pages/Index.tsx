@@ -203,7 +203,7 @@ const Hero = ({ theme }: { theme: string }) => {
             {/* Blocco testo principale allineato al centro */}
             <div className="flex justify-center">
                 <div className="max-w-3xl text-center">
-                    <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(1.62rem, 3.5vw, 2.5rem)' }}>
+                    <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)' }}>
                         Integro l'AI nel tuo marketing. <br />
                         <span className={`${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>Libero il tuo </span>
                         <span className="text-cyan-500 dark:text-cyan-400">Potenziale di Crescita<BlinkingCursor /></span>
@@ -218,26 +218,26 @@ const Hero = ({ theme }: { theme: string }) => {
                         </a>
                     </div>
                     
-                    {/* Sezione Strumenti - Carosello Loghi */}
-                    <div className="mt-12 md:mt-16">
-                        <div className="text-center mb-6 md:mb-8 px-4">
-                            <div className={`inline-block border text-xs md:text-sm font-medium px-3 py-1 md:px-4 md:py-1 rounded-md ${theme === 'light' ? 'border-cyan-500/40 text-cyan-700' : 'border-cyan-500/40 text-cyan-400'}`}>
-                                Gli strumenti che uso
+                    {/* Sezione I Tools - Carosello loghi spostato qui */}
+                    <div className="mt-16 text-center">
+                        <div className="mb-12">
+                            <div className={`inline-block border text-sm font-medium px-4 py-1 rounded-md ${theme === 'light' ? 'border-cyan-500/40 text-cyan-700' : 'border-cyan-500/40 text-cyan-400'}`}>
+                                I Tools
                             </div>
-                            <h2 className={`mt-3 md:mt-4 text-lg md:text-xl lg:text-2xl font-medium tracking-tight px-2 ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
+                            <h2 className={`mt-4 text-2xl md:text-3xl font-medium tracking-tight ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
                                 Utilizzo costantemente alcuni tra i migliori strumenti sul mercato.
                             </h2>
                         </div>
                         
                         {/* Carosello singolo da destra a sinistra */}
-                        <div className="relative w-full overflow-hidden scroll-mask">
+                        <div className="relative w-full max-w-6xl mx-auto overflow-hidden scroll-mask">
                             <div className="flex animate-scroll-left">
                                 {[...logos, ...logos, ...logos].map((logo, index) => (
                                     <img 
                                         key={`logo-${index}`}
                                         src={logo} 
                                         alt={`Logo ${(index % logos.length) + 1}`} 
-                                        className="h-6 md:h-8 lg:h-10 w-auto mx-2 md:mx-4 lg:mx-6 flex-shrink-0" 
+                                        className="h-10 md:h-14 w-auto mx-4 md:mx-8 flex-shrink-0" 
                                         loading="lazy"
                                         onError={(e) => { 
                                             console.log(`Errore caricamento logo: ${logo}`);
@@ -338,6 +338,7 @@ const Hero = ({ theme }: { theme: string }) => {
                 </div>
             </div>
             
+
             {/* Sezione Scegli la Soluzione */}
             <div id="servizi" className="mt-24">
                 <div className="text-center mb-12">
