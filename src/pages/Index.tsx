@@ -219,25 +219,25 @@ const Hero = ({ theme }: { theme: string }) => {
                     </div>
                     
                     {/* Sezione Strumenti - Carosello Loghi */}
-                    <div className="mt-16">
-                        <div className="text-center mb-8">
-                            <div className={`inline-block border text-sm font-medium px-4 py-1 rounded-md ${theme === 'light' ? 'border-cyan-500/40 text-cyan-700' : 'border-cyan-500/40 text-cyan-400'}`}>
+                    <div className="mt-12 md:mt-16">
+                        <div className="text-center mb-6 md:mb-8 px-4">
+                            <div className={`inline-block border text-xs md:text-sm font-medium px-3 py-1 md:px-4 md:py-1 rounded-md ${theme === 'light' ? 'border-cyan-500/40 text-cyan-700' : 'border-cyan-500/40 text-cyan-400'}`}>
                                 Gli strumenti che uso
                             </div>
-                            <h2 className={`mt-4 text-xl md:text-2xl font-medium tracking-tight ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
+                            <h2 className={`mt-3 md:mt-4 text-lg md:text-xl lg:text-2xl font-medium tracking-tight px-2 ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
                                 Utilizzo costantemente alcuni tra i migliori strumenti sul mercato.
                             </h2>
                         </div>
                         
                         {/* Carosello singolo da destra a sinistra */}
-                        <div className="relative w-full max-w-6xl mx-auto overflow-hidden scroll-mask">
+                        <div className="relative w-full overflow-hidden scroll-mask">
                             <div className="flex animate-scroll-left">
                                 {[...logos, ...logos, ...logos].map((logo, index) => (
                                     <img 
                                         key={`logo-${index}`}
                                         src={logo} 
                                         alt={`Logo ${(index % logos.length) + 1}`} 
-                                        className="h-8 md:h-10 w-auto mx-3 md:mx-6 flex-shrink-0" 
+                                        className="h-6 md:h-8 lg:h-10 w-auto mx-2 md:mx-4 lg:mx-6 flex-shrink-0" 
                                         loading="lazy"
                                         onError={(e) => { 
                                             console.log(`Errore caricamento logo: ${logo}`);
