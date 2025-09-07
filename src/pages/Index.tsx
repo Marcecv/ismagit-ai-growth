@@ -203,7 +203,7 @@ const Hero = ({ theme }: { theme: string }) => {
             {/* Blocco testo principale allineato al centro */}
             <div className="flex justify-center">
                 <div className="max-w-3xl text-center">
-                    <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)' }}>
+                    <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(1.62rem, 3.5vw, 2.5rem)' }}>
                         Integro l'AI nel tuo marketing. <br />
                         <span className={`${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>Libero il tuo </span>
                         <span className="text-cyan-500 dark:text-cyan-400">Potenziale di Crescita<BlinkingCursor /></span>
@@ -216,37 +216,6 @@ const Hero = ({ theme }: { theme: string }) => {
                         <a href="https://cal.com/marcecv/30min" target="_blank" rel="noopener noreferrer" className={`animated-border-btn ${theme === 'light' ? 'light-mode' : 'dark-mode'}`}>
                            <span className="btn-text">Prenota una chiamata</span>
                         </a>
-                    </div>
-                    
-                    {/* Sezione I Tools - Carosello loghi spostato qui */}
-                    <div className="mt-16 text-center">
-                        <div className="mb-12">
-                            <div className={`inline-block border text-sm font-medium px-4 py-1 rounded-md ${theme === 'light' ? 'border-cyan-500/40 text-cyan-700' : 'border-cyan-500/40 text-cyan-400'}`}>
-                                I Tools
-                            </div>
-                            <h2 className={`mt-4 text-2xl md:text-3xl font-medium tracking-tight ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
-                                Utilizzo costantemente alcuni tra i migliori strumenti sul mercato.
-                            </h2>
-                        </div>
-                        
-                        {/* Carosello singolo da destra a sinistra */}
-                        <div className="relative w-full max-w-6xl mx-auto overflow-hidden scroll-mask">
-                            <div className="flex animate-scroll-left">
-                                {[...logos, ...logos, ...logos].map((logo, index) => (
-                                    <img 
-                                        key={`logo-${index}`}
-                                        src={logo} 
-                                        alt={`Logo ${(index % logos.length) + 1}`} 
-                                        className="h-10 md:h-14 w-auto mx-4 md:mx-8 flex-shrink-0" 
-                                        loading="lazy"
-                                        onError={(e) => { 
-                                            console.log(`Errore caricamento logo: ${logo}`);
-                                            (e.currentTarget as HTMLImageElement).style.display = 'none'; 
-                                        }}
-                                    />
-                                ))}
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -338,6 +307,36 @@ const Hero = ({ theme }: { theme: string }) => {
                 </div>
             </div>
             
+            {/* Sezione I Tools */}
+            <div className="mt-24 text-center">
+                <div className="mb-12">
+                    <div className={`inline-block border text-sm font-medium px-4 py-1 rounded-md ${theme === 'light' ? 'border-cyan-500/40 text-cyan-700' : 'border-cyan-500/40 text-cyan-400'}`}>
+                        I Tools
+                    </div>
+                    <h2 className={`mt-4 text-2xl md:text-3xl font-medium tracking-tight ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
+                        Utilizzo costantemente alcuni tra i migliori strumenti sul mercato.
+                    </h2>
+                </div>
+                
+                {/* Carosello singolo da destra a sinistra */}
+                <div className="relative w-full max-w-6xl mx-auto overflow-hidden scroll-mask">
+                    <div className="flex animate-scroll-left">
+                        {[...logos, ...logos, ...logos].map((logo, index) => (
+                            <img 
+                                key={`logo-${index}`}
+                                src={logo} 
+                                alt={`Logo ${(index % logos.length) + 1}`} 
+                                className="h-10 md:h-14 w-auto mx-4 md:mx-8 flex-shrink-0" 
+                                loading="lazy"
+                                onError={(e) => { 
+                                    console.log(`Errore caricamento logo: ${logo}`);
+                                    (e.currentTarget as HTMLImageElement).style.display = 'none'; 
+                                }}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             {/* Sezione Scegli la Soluzione */}
             <div id="servizi" className="mt-24">
