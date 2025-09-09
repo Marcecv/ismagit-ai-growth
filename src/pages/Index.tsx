@@ -112,14 +112,14 @@ const LogoCarousel = ({ theme }: { theme: string }) => {
     const duplicatedLogos = [...heroLogos, ...heroLogos];
     
     return (
-        <div className="mt-12 overflow-hidden logo-carousel-container">
+        <div className="mt-8 sm:mt-12 w-full overflow-hidden logo-carousel-container">
             <div className="flex animate-logo-scroll">
                 {duplicatedLogos.map((logo, index) => (
-                    <div key={index} className="flex-shrink-0 mx-6">
+                    <div key={index} className="flex-shrink-0 mx-3 sm:mx-6">
                         <img 
                             src={logo.src} 
                             alt={logo.alt}
-                            className={`h-8 md:h-12 w-auto object-contain transition-all duration-300 ${theme === 'light' ? 'opacity-60 hover:opacity-100' : 'opacity-50 hover:opacity-80'} grayscale hover:grayscale-0`}
+                            className={`h-6 sm:h-8 md:h-12 w-auto object-contain transition-all duration-300 ${theme === 'light' ? 'opacity-60 hover:opacity-100' : 'opacity-50 hover:opacity-80'} grayscale hover:grayscale-0`}
                             onError={(e) => {
                                 (e.currentTarget as HTMLImageElement).style.display = 'none';
                             }}
@@ -244,20 +244,20 @@ const Hero = ({ theme }: { theme: string }) => {
     const activeSolutionContent = solutionsData.find(tab => tab.id === activeSolutionTab)?.content;
 
     return (
-        <section className="container mx-auto px-6 pt-8 md:pt-16 pb-12 md:pb-20">
+        <section className="container mx-auto px-4 sm:px-6 pt-6 sm:pt-8 md:pt-16 pb-8 sm:pb-12 md:pb-20">
             {/* Blocco testo principale allineato al centro */}
             <div className="flex justify-center">
-                <div className="max-w-3xl text-center">
-                    <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(1.62rem, 3.5vw, 2.5rem)' }}>
-                        Integro l'AI nel tuo marketing. <br />
+                <div className="max-w-4xl text-center px-2">
+                    <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', lineHeight: 'clamp(1.8rem, 5vw, 3rem)' }}>
+                        Integro l'AI nel tuo marketing. <br className="hidden sm:block" />
                         <span className={`${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>Libero il tuo </span>
                         <span className="text-cyan-500 dark:text-cyan-400">Potenziale di Crescita<BlinkingCursor /></span>
                     </h1>
-                    <p className={`mt-8 transition-colors duration-500 ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'}`} style={{ fontSize: 'clamp(0.9rem, 2.2vw, 1.0125rem)' }}>
+                    <p className={`mt-6 sm:mt-8 transition-colors duration-500 px-2 sm:px-0 ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'}`} style={{ fontSize: 'clamp(0.875rem, 2.5vw, 1.0125rem)', lineHeight: 'clamp(1.25rem, 3.5vw, 1.5rem)' }}>
                         Costruisco il tuo ecosistema di marketing AI su misura integrando agenti conversazionali (chat e voce), infrastrutture open source per l'automazione e sistemi per la generazione di contenuti.
                     </p>
                      {/* Pulsante Prenota una chiamata */}
-                     <div className="mt-8">
+                     <div className="mt-6 sm:mt-8">
                          <a href="https://cal.com/marcecv/30min" target="_blank" rel="noopener noreferrer" className={`animated-border-btn ${theme === 'light' ? 'light-mode' : 'dark-mode'}`}>
                             <span className="btn-text">Prenota una chiamata</span>
                          </a>
