@@ -227,6 +227,15 @@ All colors MUST be HSL.
       transform: translateX(-100%);
     }
   }
+
+  @keyframes logo-scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
   
   .animate-scroll {
     animation: infinite-scroll 30s linear infinite;
@@ -238,6 +247,36 @@ All colors MUST be HSL.
   
   .animate-scroll-left {
     animation: infinite-scroll-left 25s linear infinite;
+  }
+
+  .animate-logo-scroll {
+    animation: logo-scroll 20s linear infinite;
+  }
+
+  /* Gradiente per fade effect del carosello */
+  .logo-carousel-container {
+    position: relative;
+  }
+  
+  .logo-carousel-container::before,
+  .logo-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  .logo-carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, hsl(var(--background)), transparent);
+  }
+  
+  .logo-carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, hsl(var(--background)), transparent);
   }
   
   @media (max-width: 768px) {

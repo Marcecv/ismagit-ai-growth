@@ -4,6 +4,17 @@ import { PrivacyPolicyModal } from '@/components/PrivacyPolicyModal';
 import { CookiePolicyModal } from '@/components/CookiePolicyModal';
 import { CookieBanner } from '@/components/CookieBanner';
 
+// Import loghi
+import logo1 from '@/assets/logo-1.png';
+import logo2 from '@/assets/logo-2.png';
+import logo4 from '@/assets/logo-4.png';
+import logo7 from '@/assets/logo-7.png';
+import logo9 from '@/assets/logo-9.png';
+import logo10 from '@/assets/logo-10.png';
+import logo11 from '@/assets/logo-11.png';
+import logoVercel from '@/assets/logo-vercel.png';
+import logoPinecode from '@/assets/logo-pinecode.png';
+
 // --- Main Components ---
 
 // Definisci i link di navigazione fuori dal componente per evitare che vengano ricreati a ogni render
@@ -43,18 +54,27 @@ const featureTabsData = [
 ];
 
 const logos = [
-    "https://ik.imagekit.io/mcv/11.png?updatedAt=1752661447457",
-    "https://ik.imagekit.io/mcv/5.png?updatedAt=1752661443340",
     "https://ik.imagekit.io/mcv/9.png?updatedAt=1752661443299",
-    "https://ik.imagekit.io/mcv/10.png?updatedAt=1752661443306",
-    "https://ik.imagekit.io/mcv/4.png?updatedAt=1752661443208",
-    "https://ik.imagekit.io/mcv/6.png?updatedAt=1752661443191",
-    "https://ik.imagekit.io/mcv/7.png?updatedAt=1752661443126",
-    "https://ik.imagekit.io/mcv/3.png?updatedAt=1752661443069",
+    "https://ik.imagekit.io/mcv/10.png?updatedAt=1752661443306", 
+    "https://ik.imagekit.io/mcv/11.png?updatedAt=1752661447457",
     "https://ik.imagekit.io/mcv/1.png?updatedAt=1752661443060",
     "https://ik.imagekit.io/mcv/2.png?updatedAt=1752661443061",
-    "https://ik.imagekit.io/mcv/pinecode%20(2).png?updatedAt=1752879977615",
-    "https://ik.imagekit.io/mcv/vercel.png?updatedAt=1752879990583"
+    "https://ik.imagekit.io/mcv/vercel.png?updatedAt=1752879990583",
+    "https://ik.imagekit.io/mcv/7.png?updatedAt=1752661443126",
+    "https://ik.imagekit.io/mcv/4.png?updatedAt=1752661443208",
+    "https://ik.imagekit.io/mcv/pinecode%20(2).png?updatedAt=1752879977615"
+];
+
+const heroLogos = [
+    { src: logo9, alt: "Logo 9" },
+    { src: logo10, alt: "Logo 10" },
+    { src: logo11, alt: "Logo 11" },
+    { src: logo1, alt: "Logo 1" },
+    { src: logo2, alt: "Logo 2" },
+    { src: logoVercel, alt: "Vercel" },
+    { src: logo7, alt: "Logo 7" },
+    { src: logo4, alt: "Logo 4" },
+    { src: logoPinecode, alt: "Pinecode" }
 ];
 
 const solutionsData = [
@@ -85,6 +105,31 @@ const solutionsData = [
 const BlinkingCursor = () => (
     <span className="animate-blink" aria-hidden="true">_</span>
 );
+
+// Componente LogoCarousel
+const LogoCarousel = ({ theme }: { theme: string }) => {
+    // Duplica i loghi per un effetto di loop continuo
+    const duplicatedLogos = [...heroLogos, ...heroLogos];
+    
+    return (
+        <div className="mt-12 overflow-hidden logo-carousel-container">
+            <div className="flex animate-logo-scroll">
+                {duplicatedLogos.map((logo, index) => (
+                    <div key={index} className="flex-shrink-0 mx-6">
+                        <img 
+                            src={logo.src} 
+                            alt={logo.alt}
+                            className={`h-8 md:h-12 w-auto object-contain transition-all duration-300 ${theme === 'light' ? 'opacity-60 hover:opacity-100' : 'opacity-50 hover:opacity-80'} grayscale hover:grayscale-0`}
+                            onError={(e) => {
+                                (e.currentTarget as HTMLImageElement).style.display = 'none';
+                            }}
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
 
 // Componente Header (Menu di navigazione)
 const Header = ({ theme, toggleTheme }: { theme: string; toggleTheme: () => void }) => {
@@ -211,14 +256,17 @@ const Hero = ({ theme }: { theme: string }) => {
                     <p className={`mt-8 transition-colors duration-500 ${theme === 'light' ? 'text-gray-600' : 'text-gray-300'}`} style={{ fontSize: 'clamp(0.9rem, 2.2vw, 1.0125rem)' }}>
                         Costruisco il tuo ecosistema di marketing AI su misura integrando agenti conversazionali (chat e voce), infrastrutture open source per l'automazione e sistemi per la generazione di contenuti.
                     </p>
-                    {/* Pulsante Prenota una chiamata */}
-                    <div className="mt-8">
-                        <a href="https://cal.com/marcecv/30min" target="_blank" rel="noopener noreferrer" className={`animated-border-btn ${theme === 'light' ? 'light-mode' : 'dark-mode'}`}>
-                           <span className="btn-text">Prenota una chiamata</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                     {/* Pulsante Prenota una chiamata */}
+                     <div className="mt-8">
+                         <a href="https://cal.com/marcecv/30min" target="_blank" rel="noopener noreferrer" className={`animated-border-btn ${theme === 'light' ? 'light-mode' : 'dark-mode'}`}>
+                            <span className="btn-text">Prenota una chiamata</span>
+                         </a>
+                     </div>
+
+                     {/* Logo Carousel */}
+                     <LogoCarousel theme={theme} />
+                 </div>
+             </div>
             
             {/* Sezione "Le sfide da superare" allineata al centro */}
             <div className="mt-20 text-center">
