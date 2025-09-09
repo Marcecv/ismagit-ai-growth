@@ -119,7 +119,7 @@ const LogoCarousel = ({ theme }: { theme: string }) => {
                         <img 
                             src={logo.src} 
                             alt={logo.alt}
-                            className={`h-6 sm:h-8 md:h-12 w-auto object-contain transition-all duration-300 ${theme === 'light' ? 'opacity-60 hover:opacity-100' : 'opacity-50 hover:opacity-80'} grayscale hover:grayscale-0`}
+                            className={`h-7 sm:h-9 md:h-14 w-auto object-contain transition-all duration-300 ${theme === 'light' ? 'opacity-60 hover:opacity-100' : 'opacity-50 hover:opacity-80'} grayscale hover:grayscale-0`}
                             onError={(e) => {
                                 (e.currentTarget as HTMLImageElement).style.display = 'none';
                             }}
@@ -248,7 +248,7 @@ const Hero = ({ theme }: { theme: string }) => {
             {/* Blocco testo principale allineato al centro */}
             <div className="flex justify-center">
                 <div className="max-w-4xl text-center px-2">
-                    <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', lineHeight: 'clamp(1.8rem, 5vw, 3rem)' }}>
+                    <h1 className={`font-medium leading-tight transition-colors duration-500 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`} style={{ fontSize: 'clamp(1.725rem, 4.6vw, 2.875rem)', lineHeight: 'clamp(2.07rem, 5.75vw, 3.45rem)' }}>
                         Integro l'AI nel tuo marketing. <br className="hidden sm:block" />
                         <span className={`${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>Libero il tuo </span>
                         <span className="text-cyan-500 dark:text-cyan-400">Potenziale di Crescita<BlinkingCursor /></span>
@@ -266,7 +266,7 @@ const Hero = ({ theme }: { theme: string }) => {
                      {/* Testo sopra il carosello */}
                      <div className="mt-8">
                         <h3 className={`text-center text-xs md:text-sm mb-4 font-medium ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
-                           Uso i migliori tool AI del momento
+                           Uso +30 dei migliori tools AI
                         </h3>
                      </div>
                      
@@ -280,7 +280,7 @@ const Hero = ({ theme }: { theme: string }) => {
                 <div className={`inline-block border text-sm font-medium px-4 py-1 rounded-md ${theme === 'light' ? 'border-cyan-500/40 text-cyan-700' : 'border-cyan-500/40 text-cyan-400'}`}>
                     Le sfide da superare
                 </div>
-                <h2 className={`mt-4 text-2xl md:text-3xl font-medium tracking-tight ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
+                <h2 className={`mt-4 text-[1.4rem] md:text-[1.7rem] font-medium tracking-tight ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
                     Perché l'Intelligenza Artificiale può essere la leva strategica per la crescita del tuo business
                 </h2>
             </div>
@@ -474,7 +474,7 @@ const Footer = ({ theme }: { theme: string }) => {
                     </div>
                 </div>
                 <div className="mt-16 border-t border-neutral-800 pt-8 text-center text-gray-500 text-sm">
-                    <p>© {new Date().getFullYear()} ismagit. Tutti i diritti riservati.</p>
+                    <p> 2024 ismagit. Tutti i diritti riservati.</p>
                 </div>
             </div>
             <div className="absolute right-0 top-0 h-full flex items-start pt-20 pr-2 md:pr-4 pointer-events-none">
