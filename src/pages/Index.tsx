@@ -263,6 +263,13 @@ const Hero = ({ theme }: { theme: string }) => {
                          </a>
                      </div>
 
+                     {/* Testo sopra il carosello */}
+                     <div className="mt-8">
+                        <h3 className={`text-center text-xs md:text-sm mb-4 font-medium ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
+                           Uso i migliori tool AI del momento
+                        </h3>
+                     </div>
+                     
                      {/* Logo Carousel */}
                      <LogoCarousel theme={theme} />
                  </div>
@@ -354,38 +361,7 @@ const Hero = ({ theme }: { theme: string }) => {
                     ))}
                 </div>
             </div>
-            
-            {/* Sezione I Tools */}
-            <div className="mt-24 text-center">
-                <div className="mb-12">
-                    <div className={`inline-block border text-sm font-medium px-4 py-1 rounded-md ${theme === 'light' ? 'border-cyan-500/40 text-cyan-700' : 'border-cyan-500/40 text-cyan-400'}`}>
-                        I Tools
-                    </div>
-                    <h2 className={`mt-4 text-2xl md:text-3xl font-medium tracking-tight ${theme === 'light' ? 'text-gray-800' : 'text-gray-200'}`}>
-                        Utilizzo costantemente alcuni tra i migliori strumenti sul mercato.
-                    </h2>
-                </div>
-                
-                {/* Carosello singolo da destra a sinistra */}
-                <div className="relative w-full max-w-6xl mx-auto overflow-hidden scroll-mask">
-                    <div className="flex animate-scroll-left">
-                        {[...logos, ...logos, ...logos].map((logo, index) => (
-                            <img 
-                                key={`logo-${index}`}
-                                src={logo} 
-                                alt={`Logo ${(index % logos.length) + 1}`} 
-                                className="h-10 md:h-14 w-auto mx-4 md:mx-8 flex-shrink-0" 
-                                loading="lazy"
-                                onError={(e) => { 
-                                    console.log(`Errore caricamento logo: ${logo}`);
-                                    (e.currentTarget as HTMLImageElement).style.display = 'none'; 
-                                }}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
-
+ 
             {/* Sezione Scegli la Soluzione */}
             <div id="servizi" className="mt-24">
                 <div className="text-center mb-12">
